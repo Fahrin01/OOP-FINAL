@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="460.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalexam_sec6_2211099a.PetLoadScene_2211099Controller">
+    <children>
+        <!-- Load Data Button -->
+        <Button layoutX="150.0" layoutY="110.0" mnemonicParsing="false" onAction="#loadDataFromFileButtonOnAction" prefHeight="87.0" prefWidth="500.0" text="Based on the selected Species and Adoption Status, Load matched Pets from file to the TableView below:" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+        <!-- TableView for Pet Data -->
+        <TableView fx:id="dataShowTable" layoutX="22.0" layoutY="230.0" prefHeight="200.0" prefWidth="730.0">
+            <columns>
+                <TableColumn fx:id="petIDTableColumn" prefWidth="160.0" text="Pet ID" />
+                <TableColumn fx:id="nameTableColumn" prefWidth="160.0" text="Name" />
+                <TableColumn fx:id="speciesTableColumn" prefWidth="180.0" text="Species" />
+                <TableColumn fx:id="dateOfBirthTableColumn" prefWidth="210.0" text="Date of Birth" />
+            </columns>
+        </TableView>
+
+        <!-- Species Filter -->
+        <Label layoutX="260.0" layoutY="25.0" text="Species">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="selectedSpecies" layoutX="400.0" layoutY="20.0" prefHeight="25.0" prefWidth="140.0" />
+
+        <!-- Adoption Status Filter -->
+        <Label layoutX="260.0" layoutY="65.0" text="Adoption Status">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+      <CheckBox fx:id="selectedAdoptionStatus" layoutX="400.0" layoutY="65.0" mnemonicParsing="false" text="Adopted?" />
+    </children>
+</AnchorPane>
